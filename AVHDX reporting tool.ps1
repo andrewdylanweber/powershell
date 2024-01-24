@@ -6,7 +6,7 @@ $mailsuffix = '@contoso.com'
 
 $fromaddress = $env:COMPUTERNAME + ('-checkpoint_report') + $mailsuffix
 
-$backupdistro = 'backupse@contoso.com'
+$toaddress = 'backupse@contoso.com'
 
 #Enumerate all logical disks and output drive name
 $FixedDrives= (Get-WMIObject -Class Win32_LogicalDisk | Where-Object {$_.DriveType -eq "3"}).Name
